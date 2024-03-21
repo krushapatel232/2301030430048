@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+    
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator__input-group {
+    margin-bottom: 20px;
+}
+
+.calculator__input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.calculator__input-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.calculator__button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calculator__button:hover {
+    background-color: #45a049;
+}
+</style>
+    <div class="container">
+        <h1 class="title">Expenses</h1>
+        <div class="calculator">
+            <div class="calculator__row">
+                <div class="calculator__cell calculator__cell--budget">
+                    <p class="calculator__text">Monthly Budget</p>
+                    <p class="calculator__amount">500,000 Rs.</p>
+                </div>
+                <div class="calculator__cell calculator__cell--spent">
+                    <p class="calculator__text">Spent</p>
+                    <p class="calculator__amount calculator__amount--spent">800,00 Rs.</p>
+                </div>
+            </div>
+            <div class="calculator__row">
+                <div class="calculator__cell calculator__cell--available">
+                    <p class="calculator__text">Available</p>
+                    <p class="calculator__amount calculator__amount--available">2,000.00 Rs.</p>
+                </div>
+            </div>
+            <div class="calculator__row">
+                <div class="calculator__cell calculator__cell--description">
+                    <p class="calculator__text">Description</p>
+                    <input type="text" class="calculator__input" placeholder="Add a description">
+                </div>
+            </div>
+            <div class="calculator__row">
+                <div class="calculator__cell calculator__cell--netflix">
+                    <input type="radio" id="netflix" name="optionals" class="calculator__radio" value="netflix">
+                    <label for="netflix" class="calculator__option-label">NETFLIX</label>
+                </div>
+                <div class="calculator__cell calculator__cell--spotify
